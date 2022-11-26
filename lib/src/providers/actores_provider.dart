@@ -38,8 +38,24 @@ class ActorProvider {
   }
 
   Future<List<Actor>> getActorFoto() async {
-    final url = Uri.https(_url, '3/person/popular',
-        {'api_key': _apikey, 'language': _language}); // Pelicula
+    final url = Uri.https(
+        _url, '3/person/popular', {'api_key': _apikey, 'language': _language});
     return await _procesarRespuesta(url);
+  }
+
+  Future<String> getActorBiografia(int id) async {
+    final url = Uri.https(
+        _url, '3/person/$id', {'api_key': _apikey, 'language': _language});
+    final resp = await http.get(url);
+    final decodedData = json.decode(resp.body);
+    return decodedData['biography'];
+  }
+
+  Future<String> getActorNombre(int id) async {
+    final url = Uri.https(
+        _url, '3/person/$id', {'api_key': _apikey, 'language': _language});
+    final resp = await http.get(url);
+    final decodedData = json.decode(resp.body);
+    return decodedData['name'];
   }
 }
