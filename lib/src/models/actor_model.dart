@@ -20,6 +20,7 @@ class Actor {
   String name;
   int order;
   String profilePath;
+  String biography;
 
   Actor({
     this.castId,
@@ -30,6 +31,7 @@ class Actor {
     this.name,
     this.order,
     this.profilePath,
+    this.biography,
   });
 
   Actor.fromJsonMap(Map<String, dynamic> json) {
@@ -41,6 +43,7 @@ class Actor {
     name = json['name'];
     order = json['order'];
     profilePath = json['profile_path'];
+    biography = json['biography'];
   }
 
   getFoto() {

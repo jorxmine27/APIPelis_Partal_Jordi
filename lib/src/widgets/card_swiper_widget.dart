@@ -27,7 +27,7 @@ class CardSwiperPeliculas extends StatelessWidget {
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
                 child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, 'detalle',
+                  onTap: () => Navigator.pushNamed(context, 'detalle pelicula',
                       arguments: peliculas[index]),
                   child: FadeInImage(
                     image: NetworkImage(peliculas[index].getPosterImg()),
@@ -66,7 +66,7 @@ class CardSwiperActores extends StatelessWidget {
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
                 child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, 'detalle',
+                  onTap: () => Navigator.pushNamed(context, 'detalle actor',
                       arguments: actores[index]),
                   child: FadeInImage(
                     image: NetworkImage(actores[index].getFoto()),
