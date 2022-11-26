@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 
-import 'package:scooby_app/src/models/actores_model.dart';
+import 'package:scooby_app/src/models/actor_model.dart';
 import 'package:scooby_app/src/models/pelicula_model.dart';
 
 class PeliculasProvider {

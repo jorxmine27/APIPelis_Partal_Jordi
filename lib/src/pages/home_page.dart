@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scooby_app/src/providers/actores_provider.dart';
 import 'package:scooby_app/src/providers/peliculas_provider.dart';
 import 'package:scooby_app/src/search/search_delegate.dart';
 
@@ -7,6 +8,7 @@ import 'package:scooby_app/src/widgets/movie_horizontal.dart';
 
 class HomePage extends StatelessWidget {
   final peliculasProvider = new PeliculasProvider();
+  final actoresProvider = new ActorProvider();
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +43,10 @@ class HomePage extends StatelessWidget {
 
   Widget _swiperTarjetas() {
     return FutureBuilder(
-      future: peliculasProvider.getEnCines(),
+      future: actoresProvider.getActorFoto(),
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
-          return CardSwiper(peliculas: snapshot.data);
+          return CardSwiperActores(actores: snapshot.data);
         } else {
           return Container(
               height: 400.0, child: Center(child: CircularProgressIndicator()));

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:scooby_app/src/models/actores_model.dart';
+import 'package:scooby_app/src/models/actor_model.dart';
 import 'package:scooby_app/src/models/pelicula_model.dart';
 
 import 'package:scooby_app/src/providers/peliculas_provider.dart';
