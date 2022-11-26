@@ -50,11 +50,11 @@ class Pelicula {
     voteCount = json['vote_count'];
     id = json['id'];
     voteAverage = json['vote_average'] / 1;
-    title = json['title'];   // Pelicula
+    title = json['title']; // Pelicula
     popularity = json['popularity'] / 1;
     posterPath = json['poster_path'];
     originalLanguage = json['original_language'];
-    originalTitle = json['original_title'];  // Pelicula
+    originalTitle = json['original_title']; // Pelicula
     genreIds = json['genre_ids'].cast<int>();
     backdropPath = json['backdrop_path'];
     adult = json['adult'];

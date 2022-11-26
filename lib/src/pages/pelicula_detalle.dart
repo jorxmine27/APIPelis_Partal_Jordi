@@ -40,7 +40,8 @@ class PeliculaDetalle extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 16.0),
         ),
         background: FadeInImage(
-          image: NetworkImage("https://image.tmdb.org/t/p/w500" + pelicula.backdropPath),
+          image: NetworkImage(
+              "https://image.tmdb.org/t/p/w500" + pelicula.backdropPath),
           //image: NetworkImage(pelicula.getBackgroundImg()),
           placeholder: AssetImage('assets/img/loading.gif'),
           //fadeInDuration: Duration(microseconds: 150),
@@ -70,10 +71,18 @@ class PeliculaDetalle extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(pelicula.title, style: Theme.of(context).textTheme.bodyText1, overflow: TextOverflow.ellipsis),
-                Text(pelicula.originalTitle, style: Theme.of(context).textTheme.bodyText1, overflow: TextOverflow.ellipsis),
+                Text(pelicula.title,
+                    style: Theme.of(context).textTheme.bodyText1,
+                    overflow: TextOverflow.ellipsis),
+                Text(pelicula.originalTitle,
+                    style: Theme.of(context).textTheme.bodyText1,
+                    overflow: TextOverflow.ellipsis),
                 Row(
-                  children: <Widget>[Icon(Icons.star_border), Text(pelicula.voteAverage.toString(), style: Theme.of(context).textTheme.bodyText1)],
+                  children: <Widget>[
+                    Icon(Icons.star_border),
+                    Text(pelicula.voteAverage.toString(),
+                        style: Theme.of(context).textTheme.bodyText1)
+                  ],
                 )
               ],
             ),
