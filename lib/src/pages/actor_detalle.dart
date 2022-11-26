@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 
 import 'package:scooby_app/src/models/actor_model.dart';
