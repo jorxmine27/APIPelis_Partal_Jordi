@@ -5,7 +5,7 @@ import 'dart:async';
 
 import 'package:scooby_app/src/models/actor_model.dart';
 
-final actoresInfo = new Actor();
+final actores = new Actor();
 
 class ActorProvider {
   String _apikey = '1dcd98de779eb59fdef2fe7a0c78befb';
@@ -57,5 +57,15 @@ class ActorProvider {
     final resp = await http.get(url);
     final decodedData = json.decode(resp.body);
     return decodedData['name'];
+  }
+
+  Future<List<Actor>> buscarActor(String query) async {
+    final url = Uri.https(_url, '3/person/popular', {
+      'api_key': _apikey,
+      'language': _language,
+      'query': query
+    }); // Actor
+
+    return await _procesarRespuesta(url);
   }
 }
