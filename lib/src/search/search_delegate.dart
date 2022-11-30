@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scooby_app/src/models/actor_model.dart';
 import 'package:scooby_app/src/providers/actores_provider.dart';
-import 'package:scooby_app/src/providers/peliculas_provider.dart';
 
 class DataSearch extends SearchDelegate {
   String seleccion = '';
