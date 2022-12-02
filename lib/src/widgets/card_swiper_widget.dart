@@ -77,8 +77,6 @@ class CardSwiperActores extends StatelessWidget {
           );
         },
         itemCount: actores.length,
-        // pagination: new SwiperPagination(),
-        // control: new SwiperControl(),
       ),
     );
   }

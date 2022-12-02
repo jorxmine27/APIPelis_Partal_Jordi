@@ -60,7 +60,7 @@ class DataSearch extends SearchDelegate {
           final actores = snapshot.data;
 
           return ListView(
-              children: actores.map((actor) {
+            children: actores.map((actor) {
             return ListTile(
               leading: FadeInImage(
                 image: NetworkImage(actor.getFoto()),
